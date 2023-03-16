@@ -31,7 +31,8 @@ int main(void)
 
             DrawRectangle(screenWidth/2 - 128, screenHeight/2 - 128, 256, 256, BLACK);
             DrawRectangle(screenWidth/2 - 112, screenHeight/2 - 112, 224, 224, RAYWHITE);
-            DrawText(text.c_str(), screenWidth/2 - 44, screenHeight/2 + 48, 50, BLACK);
+            // DrawText(text.c_str(), screenWidth/2 - 44, screenHeight/2 + 48, 50, BLACK);
+            DrawText(text.c_str(), screenWidth/2 - 25, screenHeight/2 - 25, 50, BLACK);
 
             DrawText("Press RETURN to continue.", 350, 370, 10, GRAY);
 
