@@ -15,7 +15,7 @@ int main(void)
 
     Rectangle boxA = {
     20,
-    20,
+    screenHeight - ((float)screenHeight / 2),
     40,
     40 };
 
@@ -48,7 +48,7 @@ int main(void)
         // Draw
         BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+            // ClearBackground(RAYWHITE);
 
             // DrawRectangle(screenWidth/2 - 128, screenHeight/2 - 128, 256, 256, BLACK);
             // DrawRectangle(screenWidth/2 - 112, screenHeight/2 - 112, 224, 224, RAYWHITE);
