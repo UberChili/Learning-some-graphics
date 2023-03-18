@@ -11,26 +11,39 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    std::vector<Rectangle> rectangles;
+    int n_squares;
 
-    for (int i = 0, x = 20; i < 10 && x < screenWidth; i++, x += 70)
-    {
-        Rectangle aux_rect = {(float)x, screenHeight/2.0, 60, 60};
-    }
+    Rectangle boxA = {
+    20,
+    20,
+    40,
+    40 };
+
+    std::cout << "Input number of squares: ";
+    std::cin >> n_squares;
+    std::cout << "Squares: " << n_squares << "\n";
 
 
     InitWindow(screenWidth, screenHeight, "raylib [shapes] example - Drawing multiple squares");
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
 
+    int x_incr = boxA.width + 20;
+    int y_incr = boxA.height + 20;
+
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
         // TODO: Update your variables here
 
-        // if (IsKeyPressed(KEY_SPACE)) {
-
-        // }
+        if (IsKeyPressed(KEY_SPACE)) {
+            if (boxA.x + x_incr <= screenWidth - 20) {
+                boxA.x += x_incr;
+            }
+            else {
+                boxA.x = 20;
+            }
+        }
 
         // Draw
         BeginDrawing();
@@ -40,8 +53,9 @@ int main(void)
             // DrawRectangle(screenWidth/2 - 128, screenHeight/2 - 128, 256, 256, BLACK);
             // DrawRectangle(screenWidth/2 - 112, screenHeight/2 - 112, 224, 224, RAYWHITE);
             // DrawText(text.c_str(), screenWidth/2 - 25, screenHeight/2 - 25, 50, BLACK);
+            DrawRectangleRec(boxA, GOLD);
 
-            DrawText("Press RETURN to continue.", 350, 370, 10, GRAY);
+            DrawText("Press SPACEBAR to continue.", 350, 370, 10, GRAY);
 
         EndDrawing();
     }
