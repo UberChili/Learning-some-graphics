@@ -55,13 +55,12 @@ int main(void)
             // DrawText(text.c_str(), screenWidth/2 - 25, screenHeight/2 - 25, 50, BLACK);
             DrawRectangleRec(boxA, GOLD);
 
-            DrawText("Press SPACEBAR to continue.", 350, 370, 10, GRAY);
+            DrawText("Press SPACEBAR to continue.", 300, screenHeight - 20, 15, GRAY);
 
         EndDrawing();
     }
 
     // De-Initialization
     CloseWindow();        // Close window and OpenGL context
-
     return 0;
 }
