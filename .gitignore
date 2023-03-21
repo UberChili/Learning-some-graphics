@@ -6,3 +6,4 @@ rectangle_ex
 app
 fonts_exe
 *_exe
+*.DSYM/
